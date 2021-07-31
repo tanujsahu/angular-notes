@@ -1,0 +1,168 @@
+node js install   //------
+angular cli install  //--------
+check ng --version //----- angular version for checking install or not
+ng new app   //------ create new angular project which name is app
+cd app       // change folder location
+ng serve //  start your project
+ng serve --port=5100    //----- you can set default port where run your application locally
+
+
+
+--------------
+default testing framework is:-
+default testing framewrok is supported by valina angular project
+1) jasmine - for unit testing
+2) karma - for test runner and execution
+3) protractor - for end to end test scripts
+
+--------------
+what command do yu use to run test (unit test ? e2e test)
+Ng test (npm run test)- fro unit tests
+Ng e2e - fro end to end tests
+
+--------------
+how do you upgrade angular apps
+ng update @angular/cli @ angular/core
+
+--------------
+how to convert typscript code into javascript
+its called transpilling
+
+--------------
+how do you find lint issues in code
+ng lint - command will run the
+
+--------------
+how can you get height and width in componentg class?
+height = window.height;
+width = window.width;
+
+---------------
+where and how to do you unsubscribe the observable?
+OnNgDestroy method in the componet.ts
+Subscription.unsubscribe();
+
+---------------
+how to disbale prefix to any componet ?
+ng g c comp --prefix=false
+
+--------------
+how do you optimize angular app ?
+consider lazy loading instead of fully bundled app is app size is more.
+make sure that 3rd party library which is not used , is removed from the application.
+have all dependecies and dev-dependencies are clearly separated.
+make sure the applaication does't have any un-neccesary import statement.
+make sure the application is bunddled, uglified, and tree shaking is done.
+consider AOT compilation.
+
+---------------
+what is ngZone ? optimize an angular app ?
+angular dependencies which provide a machanizm, called zones
+
+---------------
+what are angular modules ??
+modules are logical boundaries in your application.
+NgModule decorator has three options :-
+the import option is used other module.
+
+----------------
+what is the default module bundler ?
+webpack.
+other packaging and module bundlers that can be used are :-
+gulp.
+babel.
+grunt.
+
+----------------
+what is ngModule ?
+ngModule is class describe how the application parts fir together.
+
+----------------
+what are metadata for ngModule ?
+@NgModule accepts a metadata obj that tells angular how to compile and launc the application :-
+imports.
+exports.
+providers.
+bootstrap.
+
+----------------
+how to create new module using angular cli ?
+ng g m moduleName.
+
+----------------
+how to export a componets from module ?
+inside export array we import are component.
+
+-----------------
+how to add new module inside app ?
+inside import we declare module name which you want to export it.
+
+-----------------
+what are component ?
+basic UI building block of any angular application .
+subset of directive.
+
+---------------
+explain component structure and building block?
+selector :- define html name
+template or templateUrl :- html file
+styles :- define stylesheet type , css or scss, sass
+directives :- another component we want use inside our componet.
+providers :- passing the service that we need insider our components.
+
+---------------
+can component be nested ?
+yes - 
+.Site-framwork module
+ . s1 component 
+    . s2 componet
+
+----------------
+Explain @component decorator ?
+inside @component decorator we can define coponent structure like , templateUrl,styleUrls.
+
+---------------
+how to generate new component in angular application ?
+ng g c componentName
+
+--------------
+angular componet have one component true false ?
+true .
+like app component at least one always be inside angular apllication.
+
+-----------------
+angular component lifecycle ?
+ngOnChanges :-
+ngOnInit :-
+ngDoCheck :-
+ngAfterContentInit :-
+ngAfterContentChecked :-
+ngAfterViewInit :-
+ngafterViewChecked :-
+ngOnDestroy :-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
