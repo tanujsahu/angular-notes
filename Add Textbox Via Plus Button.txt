@@ -1,0 +1,20 @@
+//---------------------- Add textbox via plus button ------------
+    this.saleHistoryObj = { leftTime: '', startTime: '', calculatedTime: '', customerList: [{ name: 'Customer 1' }, { name: 'Customer 2' }] }
+
+
+ <div class="flex flex-col sm:flex-row" *ngFor="let customer of saleHistoryObj.customerList; let i = index">
+      <mat-form-field class=" flex-auto">
+        <input matInput [placeholder]="'Customer'+(i+1)" [(ngModel)]="customer.name">
+      </mat-form-field>
+      <div class="p-1 float-right">
+        <!-- <div class="p-1 flex-auto"> -->
+        <span *ngIf="i>0">
+          <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+            (click)="saleHistoryObj.customerList.splice(i+1,0,{name:''})" class="p-2"> + </button>
+          <span *ngIf="i>1" class="ml-1">
+            <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+              (click)="saleHistoryObj.customerList.splice(i,1)"> - </button>
+          </span>
+        </span>
+      </div>
+    </div>
