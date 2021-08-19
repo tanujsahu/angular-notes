@@ -1,0 +1,18 @@
+----------- SNACKBAR ----------
+
+  constructor(private _snackBar: MatSnackBar) { }
+
+ //---snackbar----------------
+ horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+ verticalPosition: MatSnackBarVerticalPosition = 'top'; durationInSeconds: any = 5;
+
+  openSnackbar(msg?,status?) {
+    this._snackBar.open(msg, 'Close', {
+      horizontalPosition: this.horizontalPosition, verticalPosition: this.verticalPosition,
+      duration: this.durationInSeconds * 1000,
+      panelClass: ['mat-toolbar', `mat-${status}`]
+    })
+  }
+
+//-------------called snackbar----------
+     this.openSnackbar('! Deleted Succefully','primary')

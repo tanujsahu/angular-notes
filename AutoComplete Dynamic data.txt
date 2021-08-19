@@ -1,0 +1,32 @@
+ AUTOCOMPLETE ANGULAR     ------------- module and formcontrol , observable add etc---
+
+================================================ HTML ===============================================================
+<mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>Assignee</mat-label>
+                      <input type="text" matInput [formControl]="myControlNew" [matAutocomplete]="autoNew">
+                      <mat-autocomplete #autoNew="matAutocomplete" [displayWith]="displayFnNew">
+                        <mat-option *ngFor="let option of filteredOptionsNew | async" [value]="option">
+                          {{option.name}}
+                        </mat-option>
+                      </mat-autocomplete>
+                    </mat-form-field>
+
+================================================ TS ===============================================================
+  myControlNew = new FormControl();
+   filteredOptionsNew: Observable<any[]>;
+  getAllCustomerNew() {
+    this.customerService.getCustomerByAdminId(this.adminId).then(obj => {
+      this.customerList = obj;
+      this.filteredOptionsNew = this.myControlNew.valueChanges.pipe(startWith(''), map(value => typeof value === 'string' ? value : value.name),
+        map(name => name ? this._filterNew(name) : this.customerList.slice())
+      );
+    })
+
+  }
+  displayFnNew(user: any): string {
+    return user && user.name ? user.name : '';
+  }
+  private _filterNew(name: string): any[] {
+    const filterValue = name.toLowerCase();
+    return this.customerList.filter(option => option.name.toLowerCase().includes(filterValue));
+  }

@@ -1,0 +1,28 @@
+AWS ------ amazon web services   <!-- https://docs.aws.amazon.com/efs/latest/ug/setting-up.html -->
+
+Generate Putty ---------- Create Key   <!-- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html -->
+EC2                                    <!-- https://docs.aws.amazon.com/efs/latest/ug/gs-step-one-create-ec2-resources.html -->
+
+Create Db Inside AWS                   <!-- https://aws.amazon.com/quickstart/architecture/mongodb/  -->
+<!-- https://aws.amazon.com/free/?trk=ps_a134p0000078PqHAAU&trkCampaign=acq_paid_search_brand&sc_channel=ps&sc_campaign=acquisition_IN&sc_publisher=google&sc_category=core-main&sc_country=IN&sc_geo=APAC&sc_outcome=acq&sc_detail=aws&sc_content=Brand%20Core%20AWS_p&sc_matchtype=p&sc_segment=509606977848&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Core-Main|Core|IN|EN|Text|xx|PH&s_kwcid=AL!4422!3!509606977848!p!!g!!aws&ef_id=EAIaIQobChMIlb7FnbSy8gIVKIJLBR2vwwP4EAAYAiAAEgLUWfD_BwE:G:s&s_kwcid=AL!4422!3!509606977848!p!!g!!aws&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all -->
+
+Create EC2 Instance For Project  <!-- https://www.guru99.com/creating-amazon-ec2-instance.html -->
+Screen Command , <!------ https://www.javatpoint.com/linux-screen-command ---->
+
+
+
+Connect Mongodb Via Connection String ----------------
+IP --------- From AWS
+
+
+
+================================================================== STEP =============================================================================
+Tutorial Contents ......
+1) Create a new Ubuntu server on AWS EC2.
+2) Connect to Ubuntu EC2 instance via SSH.
+3) Setup server with Node.js + MongoDB + NGINX.
+4) Deploy Node.js + MongoDB back-end API.
+5) Build and Deploy Angular Front-end app.
+6) Configure NGINX to serve API and front-end.
+7) Test the MEAN Stack app in a browser.
+<!-- https://jasonwatmore.com/post/2019/12/02/angular-nodejs-on-aws-how-to-deploy-a-mean-stack-app-to-amazon-ec2 -->
